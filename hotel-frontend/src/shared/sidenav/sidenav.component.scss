@@ -1,0 +1,47 @@
+@import '../../styles.scss';
+
+aside{
+    background-color: $background-aside;
+    height: 100vh;
+    max-width: 13rem;
+    width: 13rem;
+    box-shadow: 1px 0px 80px  rgba(0, 0, 0, 0.185);
+
+    picture{
+        display: flex;
+        justify-content: center;
+        #logo{
+            width: 9rem;
+            margin-top: .5rem;
+        }
+    }
+
+    .options{
+        display: flex;
+        margin-top: 5rem;
+        flex-direction: column;
+        p{
+            display: flex;
+            align-items: center;
+            padding: .7rem 0rem .7rem 1rem;
+            margin: .7rem 0 .7rem 2rem;
+            font-size: larger;
+            color: $white-aside;
+            font-weight: 500;
+            cursor: pointer;
+            img{
+                width: 1.5rem;
+                margin-right: .7rem;
+                filter: invert(70%) sepia(8%) saturate(6%) hue-rotate(340deg) brightness(89%) contrast(87%);
+            }
+            &:hover{
+                color: #08aff1;
+                img{
+                    filter: invert(63%) sepia(87%) saturate(4189%) hue-rotate(163deg) brightness(99%) contrast(108%);
+                }
+                background-color: #ececec;
+                border-radius: 30px 0 0 30px;
+            }
+        }
+    }
+}
