@@ -10,7 +10,10 @@
     "paths": {
       "@shared/*": [
         "src/app/shared/*"
-      ]
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
     }
   },
   "files": [
