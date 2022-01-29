@@ -6,7 +6,10 @@
     "paths": {
       "@shared/*": [
         "src/app/shared/*"
-      ]
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
