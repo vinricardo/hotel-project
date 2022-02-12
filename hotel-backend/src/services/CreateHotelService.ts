@@ -13,14 +13,27 @@ class CreateHotelService {
         })
 
         if(hotel.location){
-            var newLocation = await prismaClient.location.create({
+             await prismaClient.location.create({
                 data: {
                     latitude: hotel.location.longitude,
                     longitude: hotel.location.latitude,
                     hotelId: newHotel.id
                 }
             })
-            return Object.assign({...newHotel, location:{...newLocation}});
+        }
+
+        if(hotel.pictures){
+            hotel.pictures.forEach(async picture => {
+                picture.hotelId = newHotel.id
+                picture.url = `/pictures/${picture.hotelId}/${picture.fileName}`
+                await prismaClient.picture.create({
+                    data: {
+                        url: picture.url,
+                        hotelId: picture.hotelId,
+                        profile: picture.profile || false
+                    }
+                })
+            });
         }
 
         return newHotel;
