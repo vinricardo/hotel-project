@@ -24,8 +24,18 @@ aside {
     justify-content: space-around;
   }
 
+  .ads {
+    display: flex;
+    align-items: center;
+    img {
+      width: 80%;
+      border-radius: 10%;
+    }
+  }
+
   .options,
-  .exit-option {
+  .exit-option,
+  .ads {
     display: flex;
     flex-direction: column;
     p {
@@ -33,18 +43,18 @@ aside {
       align-items: center;
       padding: 0.7rem 0rem 0.7rem 1rem;
       margin: 0.7rem 0 0.7rem 2rem;
-      font-size: larger;
+      font-size: 14px;
       color: $white-aside;
-      font-weight: 500;
+      font-weight: 600;
       cursor: pointer;
       img {
-        width: 1.5rem;
+        width: 1.4rem;
         margin-right: 0.7rem;
-        filter: invert(70%) sepia(8%) saturate(6%) hue-rotate(340deg)
-          brightness(89%) contrast(87%);
+        filter: invert(74%) sepia(0%) saturate(217%) hue-rotate(130deg)
+          brightness(99%) contrast(85%);
       }
       &:hover {
-        color: #007bff;
+        color: #3c94ff;
         img {
           filter: invert(50%) sepia(93%) saturate(5408%) hue-rotate(198deg)
             brightness(100%) contrast(109%);
