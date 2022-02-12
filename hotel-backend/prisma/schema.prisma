@@ -15,7 +15,7 @@ model Location {
   longitude Decimal
   latitude  Decimal
   hotel     Hotel?  @relation(fields: [hotelId], references: [id])
-  hotelId   Int?
+  hotelId   Int?    @unique
 }
 
 model Review {
@@ -23,13 +23,21 @@ model Review {
   rating   Decimal
   overview String
   hotel    Hotel   @relation(fields: [hotelId], references: [id])
-  hotelId  Int     @unique
+  hotelId  Int
   user     User    @relation(fields: [userId], references: [id])
-  userId   Int     @unique
+  userId   Int
+}
+
+model Picture {
+  id      Int     @id @default(autoincrement())
+  url     String
+  profile Boolean @default(false)
+  hotel   Hotel   @relation(fields: [hotelId], references: [id])
+  hotelId Int
 }
 
 model User {
-  id       Int    @id @default(autoincrement())
+  id       Int      @id @default(autoincrement())
   fullName String
   userName String
   password String
@@ -46,6 +54,7 @@ model Hotel {
   description String
   facilities  String
   reviews     Review[]
+  pictures    Picture[]
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @default(now())
 }

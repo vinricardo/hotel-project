@@ -1,4 +1,4 @@
-import prismaClient from "../prisma";
+import prismaClient from '../prisma';
 
 class GetHotelsService {
     async execute(){
@@ -8,7 +8,8 @@ class GetHotelsService {
             },
             include:{
                 location: true,
-                reviews: true
+                reviews: true,
+                pictures: true
             }
         })
 
