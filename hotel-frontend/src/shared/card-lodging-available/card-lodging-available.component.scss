@@ -1,0 +1,37 @@
+@import "../../styles.scss";
+.card {
+  width: 12rem;
+  background-color: #fff;
+  box-shadow: 2px 0px 8px #00000027;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 17rem;
+  margin-left: 0.5rem;
+  #logo {
+    border-radius: 15px;
+    width: 11rem;
+    height: 10rem;
+    margin: 0 auto;
+  }
+  h3 {
+    font-size: 16px;
+    padding: 0.7rem 0.7rem 0.2rem 0.7rem;
+  }
+  p {
+    font-size: 12px;
+    padding: 0.1rem 0.7rem 0.5rem 0.7rem;
+    &#location {
+      display: flex;
+      align-items: center;
+      color: $white-aside;
+    }
+    &#price {
+      font-size: 16px;
+      span {
+        color: $white-aside;
+      }
+    }
+  }
+}

@@ -6,11 +6,27 @@
     <div class="filters">
         <div class="date-filter">
             <label>Date</label>
-            <input type="text" placeholder="IS COMING..."/>
+            <input type="text" id="date" placeholder="Select date"
+            onfocus="(this.type='date')" onblur="(this.type='text')"/>
         </div>
         <div class="location-filter">
             <label>Where to</label>
-            <input type="text" placeholder="IS COMING..."/>
+            <input type="text" id="location" placeholder="Location"/>
+        </div>
+        <div class="button-filter">
+            <label style="visibility: hidden;">Search</label>
+            <button>Search</button>
+        </div>
+    </div>
+    <div class="hotels">
+        <div class="hotel-header">
+            <span style="font-weight: 600;">Lodging available</span>
+            <span>View All</span>
+        </div>
+        <div class="available">
+            <app-card-lodging-available></app-card-lodging-available>
+            <app-card-lodging-available></app-card-lodging-available>
+            <app-card-lodging-available></app-card-lodging-available>
         </div>
     </div>
 </section>

@@ -54,7 +54,7 @@ aside {
           brightness(99%) contrast(85%);
       }
       &:hover {
-        color: #3c94ff;
+        color: $blue;
         img {
           filter: invert(50%) sepia(93%) saturate(5408%) hue-rotate(198deg)
             brightness(100%) contrast(109%);

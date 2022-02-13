@@ -15,20 +15,80 @@ section {
     }
   }
   .filters {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     display: flex;
     justify-content: space-between;
-    width: 30vw;
+    width: 35vw;
+    :nth-child(3) {
+      button {
+        outline: 0;
+        border: 0;
+        padding: 1rem 2rem;
+        border-radius: 15px;
+        color: #fff;
+        cursor: pointer;
+        font-weight: 600;
+        background-color: $blue;
+        align-items: flex-end;
+        &:hover {
+          opacity: 0.8;
+        }
+        &:focus {
+          outline: #3c94ff85 5px solid;
+        }
+      }
+    }
     .date-filter,
-    .location-filter {
+    .location-filter,
+    .button-filter {
       label {
         font-size: 16px;
         font-weight: 600;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
       }
       display: flex;
       flex-direction: column;
       justify-content: space-around;
+    }
+    input {
+      border: 2px solid $blue;
+      outline: 0;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 10px;
+      color: $white-aside;
+      font-weight: 500;
+      &#date[type="text"] {
+        display: block;
+        background: url("../../assets/icon/calendar.svg") no-repeat 95% center;
+        padding: 0.7rem 0.4rem;
+      }
+      &::-webkit-calendar-picker-indicator {
+        display: block;
+        background: url("../../assets/icon/calendar.svg") no-repeat;
+        width: 18px;
+        height: 18px;
+        border-width: thin;
+      }
+    }
+    #location {
+      background: url("../../assets/icon/place.svg") no-repeat left center;
+      padding: 0.7rem 1.5rem;
+    }
+  }
+  .hotels {
+    .hotel-header {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      span:nth-child(2) {
+        color: $blue;
+        cursor: pointer;
+      }
+    }
+    .available {
+      display: flex;
+      margin-top: 1rem;
     }
   }
 }

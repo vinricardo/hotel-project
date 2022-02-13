@@ -1,17 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
+import { CardLodgingAvailableComponent } from './card-lodging-available/card-lodging-available.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 
 
 
 @NgModule({
   declarations: [
-    SidenavComponent
+    SidenavComponent,
+    CardLodgingAvailableComponent
   ],
   imports: [
     CommonModule
   ],
-  exports: [SidenavComponent]
+  exports: [SidenavComponent,CardLodgingAvailableComponent]
 })
 export class SharedModule { }
