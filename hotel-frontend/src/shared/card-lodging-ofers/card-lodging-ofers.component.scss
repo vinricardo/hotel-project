@@ -1,0 +1,45 @@
+@import "../../styles.scss";
+.card {
+  width: 15rem;
+  display: flex;
+  background-color: #fff;
+  box-shadow: 2px 0px 8px #00000027;
+  border-radius: 15px;
+  padding: 0.3rem;
+  align-items: center;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  img {
+    border-radius: 10px;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 3rem;
+    margin-left: 0.5rem;
+    p {
+      margin-left: 0.2rem;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    span {
+      display: flex;
+      align-items: center;
+      max-width: 140px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      img {
+        width: 1.5rem;
+      }
+      font-size: 12px;
+    }
+  }
+  #price {
+    font-size: 14px;
+    margin-left: 0.7rem;
+  }
+}

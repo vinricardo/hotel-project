@@ -28,5 +28,20 @@
             <app-card-lodging-available></app-card-lodging-available>
             <app-card-lodging-available></app-card-lodging-available>
         </div>
+        <div class="ofers-header">
+            <span style="font-weight: 600;" (click)="setTab(hotelsTabs[0])" 
+            [ngClass]="{'disable-option': checkActiveTab(hotelsTabs[0])}">{{hotelsTabs[0]}}</span>
+            <span style="font-weight: 600;" (click)="setTab(hotelsTabs[1])"
+            [ngClass]="{'disable-option': checkActiveTab(hotelsTabs[1])}">{{hotelsTabs[1]}}</span>
+            <span style="font-weight: 600;" (click)="setTab(hotelsTabs[2])"
+            [ngClass]="{'disable-option': checkActiveTab(hotelsTabs[2])}">{{hotelsTabs[2]}}</span>
+            <span>View All</span>
+        </div>
+        <div class="ofers">
+            <app-card-lodging-ofers></app-card-lodging-ofers>
+            <app-card-lodging-ofers></app-card-lodging-ofers>
+            <app-card-lodging-ofers></app-card-lodging-ofers>
+            <app-card-lodging-ofers></app-card-lodging-ofers>
+        </div>
     </div>
 </section>

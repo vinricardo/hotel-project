@@ -78,7 +78,7 @@ section {
   }
   .hotels {
     .hotel-header {
-      margin-top: 2rem;
+      margin-top: 1.2rem;
       display: flex;
       justify-content: space-between;
       span:nth-child(2) {
@@ -91,4 +91,35 @@ section {
       margin-top: 1rem;
     }
   }
+  .ofers-header {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+    span {
+      font-size: 17px;
+      cursor: pointer;
+      padding-bottom: 5px;
+      background: linear-gradient(to right, #ffffff, #3c94ff);
+      background-size: 100% 3.5px;
+      background-position: bottom 0 left 0, bottom 3px left 0;
+      background-repeat: no-repeat;
+    }
+    span:last-child {
+      margin-left: 10rem;
+      color: $blue;
+      background: 0 !important;
+      cursor: pointer;
+    }
+  }
+  .ofers {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 37vw;
+  }
+}
+.disable-option {
+  color: $white-aside;
+  background: 0 !important;
 }
