@@ -1,0 +1,105 @@
+@import "../../styles.scss";
+section {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  h2 {
+    font-size: 18px;
+    color: $default-text;
+    margin: 1rem 0;
+  }
+  .imgs {
+    display: flex;
+    justify-content: center;
+    .main-pic {
+      display: flex;
+      img {
+        width: 11rem;
+        height: 11rem;
+        border-radius: 10px;
+      }
+    }
+    .others-pic {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: 1rem;
+      img {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 10px;
+      }
+    }
+  }
+  .options {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    span {
+      font-weight: 600;
+      cursor: pointer;
+      padding-bottom: 5px;
+      background: linear-gradient(to right, #ffffff, #3c94ff);
+      background-size: 100% 3.5px;
+      background-position: bottom 0 left 0, bottom 3px left 0;
+      background-repeat: no-repeat;
+      &:first-child {
+        font-size: 16px;
+      }
+      &:not(:first-child) {
+        font-size: 15px;
+      }
+    }
+  }
+  .info {
+    display: flex;
+    flex-wrap: wrap;
+    p {
+      max-height: 80px;
+      font-size: 14px;
+      overflow: hidden;
+      line-height: 20px;
+      text-overflow: ellipsis;
+      text-align: justify;
+      color: $white-aside;
+    }
+    span {
+      font-weight: 500;
+      color: $blue;
+      cursor: pointer;
+    }
+  }
+  .price-view {
+    top: 87vh;
+    display: flex;
+    position: absolute;
+    button {
+      width: 16rem;
+      height: 1rem;
+      outline: 0;
+      border: 0;
+      padding: 1rem 2rem;
+      border-radius: 15px;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 600;
+      span {
+        font-weight: 500;
+      }
+      background-color: $blue;
+      align-items: flex-end;
+      &:hover {
+        opacity: 0.8;
+      }
+      &:focus {
+        outline: #3c94ff85 5px solid;
+      }
+    }
+  }
+}
+
+.disable-option {
+  color: $white-aside;
+  background: 0 !important;
+}

@@ -1,0 +1,138 @@
+@import "../../styles.scss";
+section {
+  color: $default-text;
+  padding: 2rem;
+  width: 50vw;
+  header {
+    display: flex;
+    legend {
+      font-size: 22px;
+      font-weight: 600;
+    }
+    img {
+      margin-left: 15px;
+      width: 28px;
+      height: 28px;
+    }
+  }
+  .filters {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    :nth-child(3) {
+      button {
+        outline: 0;
+        border: 0;
+        padding: 1rem 2rem;
+        border-radius: 15px;
+        color: #fff;
+        cursor: pointer;
+        font-weight: 600;
+        background-color: $blue;
+        align-items: flex-end;
+        &:hover {
+          opacity: 0.8;
+        }
+        &:focus {
+          outline: #3c94ff85 5px solid;
+        }
+      }
+    }
+    .date-filter,
+    .location-filter,
+    .button-filter {
+      label {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    input {
+      border: 2px solid $blue;
+      outline: 0;
+      width: 15rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 10px;
+      color: $white-aside;
+      font-weight: 500;
+      &#date[type="text"] {
+        display: block;
+        background: url("../../assets/icon/calendar.svg") no-repeat 95% center;
+        padding: 0.7rem 0.4rem;
+      }
+      &::-webkit-calendar-picker-indicator {
+        display: block;
+        background: url("../../assets/icon/calendar.svg") no-repeat;
+        width: 18px;
+        height: 18px;
+        border-width: thin;
+      }
+    }
+    #location {
+      background: url("../../assets/icon/place.svg") no-repeat left center;
+      padding: 0.7rem 1.5rem;
+    }
+  }
+  .hotels {
+    .hotel-header {
+      margin-top: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      span:nth-child(2) {
+        color: $blue;
+        cursor: pointer;
+      }
+    }
+    .available {
+      display: flex;
+      margin-top: 1rem;
+    }
+  }
+  .ofers-header {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+    span {
+      font-size: 17px;
+      cursor: pointer;
+      padding-bottom: 5px;
+      background: linear-gradient(to right, #ffffff, #3c94ff);
+      background-size: 100% 3.5px;
+      background-position: bottom 0 left 0, bottom 3px left 0;
+      background-repeat: no-repeat;
+    }
+    span:last-child {
+      margin-left: 10rem;
+      color: $blue;
+      background: 0 !important;
+      cursor: pointer;
+    }
+  }
+  .ofers {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 50vw;
+  }
+}
+.more-infos {
+  display: flex;
+  justify-content: center;
+  width: 25rem;
+  box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.185);
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  position: absolute;
+  height: 100vh;
+}
+.disable-option {
+  color: $white-aside;
+  background: 0 !important;
+}
