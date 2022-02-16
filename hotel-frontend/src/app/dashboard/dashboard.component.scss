@@ -2,6 +2,7 @@
 section {
   color: $default-text;
   padding: 2rem;
+  width: 50vw;
   header {
     display: flex;
     legend {
@@ -18,7 +19,7 @@ section {
     margin-top: 1.5rem;
     display: flex;
     justify-content: space-between;
-    width: 35vw;
+    width: 50vw;
     :nth-child(3) {
       button {
         outline: 0;
@@ -53,6 +54,7 @@ section {
     input {
       border: 2px solid $blue;
       outline: 0;
+      width: 15rem;
       cursor: pointer;
       padding: 0.5rem;
       border-radius: 10px;
@@ -116,8 +118,19 @@ section {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 37vw;
+    width: 50vw;
   }
+}
+.more-infos {
+  display: flex;
+  justify-content: center;
+  width: 25rem;
+  box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.185);
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  position: absolute;
+  height: 100vh;
 }
 .disable-option {
   color: $white-aside;

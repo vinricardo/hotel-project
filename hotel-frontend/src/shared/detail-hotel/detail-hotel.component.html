@@ -1,0 +1,28 @@
+<section>
+    <h2>Plaza Hotel</h2>
+    <div class="imgs">
+        <div class="main-pic">
+            <img src="../../assets/img/ads/off-45-percent.png" alt="">
+        </div>
+        <div class="others-pic">
+            <img src="../../assets/img/ads/off-45-percent.png" alt="">
+            <img src="../../assets/img/ads/off-45-percent.png" alt="">
+        </div>
+    </div>
+    <div class="options">
+        <span  style="font-weight: 600;" (click)="setTab(tabs[0])" 
+        [ngClass]="{'disable-option': checkActiveTab(tabs[0])}">Overwiew</span>
+        <span style="font-weight: 600;" (click)="setTab(tabs[1])" 
+        [ngClass]="{'disable-option': checkActiveTab(tabs[1])}">Facilities</span>
+        <span style="font-weight: 600;" (click)="setTab(tabs[2])" 
+        [ngClass]="{'disable-option': checkActiveTab(tabs[2])}">Details</span>
+        <span style="font-weight: 600;" (click)="setTab(tabs[3])" 
+        [ngClass]="{'disable-option': checkActiveTab(tabs[3])}">Reviews</span>
+    </div>
+    <div class="info">
+        <p id="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut dolor tristique nisi luctus mattis. Proin non massa vitae tortor suscipit convallis eget vitae urna. Sed at augue nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada.</p><span (click)="readMore()">{{moreInfo ? 'Read less' : 'Read more'}}</span>
+    </div>
+    <div class="price-view">
+        <button>{{'$41.25'}}<span>/night</span></button>
+    </div>
+</section>

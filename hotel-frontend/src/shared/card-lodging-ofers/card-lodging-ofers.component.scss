@@ -1,6 +1,6 @@
 @import "../../styles.scss";
 .card {
-  width: 15rem;
+  width: 20rem;
   display: flex;
   background-color: #fff;
   box-shadow: 2px 0px 8px #00000027;
@@ -40,6 +40,6 @@
   }
   #price {
     font-size: 14px;
-    margin-left: 0.7rem;
+    margin-left: 1rem;
   }
 }
