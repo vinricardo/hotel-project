@@ -10,6 +10,10 @@
       "@assets/*": [
         "src/assets/*"
       ],
+      "range-input": [
+        "dist/range-input/range-input",
+        "dist/range-input"
+      ],
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
