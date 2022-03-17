@@ -25,7 +25,7 @@ class CreateHotelService {
         if(hotel.pictures){
             hotel.pictures.forEach(async picture => {
                 picture.hotelId = newHotel.id
-                picture.url = `/pictures/${picture.hotelId}/${picture.fileName}`
+                picture.url = `../pictures/${picture.hotelId}/${picture.fileName}`
                 await prismaClient.picture.create({
                     data: {
                         url: picture.url,

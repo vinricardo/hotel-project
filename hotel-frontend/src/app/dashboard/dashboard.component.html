@@ -1,52 +1,68 @@
 <section>
-        <header>
-            <legend>Find hotel to stay </legend>
-            <img src="../../assets/icon/hotel.png">
-        </header>
-        <div class="filters">
-            <div class="date-filter">
-                <label>Date</label>
-                <input type="text" id="date" placeholder="Select date"
-                onfocus="(this.type='date')" onblur="(this.type='text')"/>
-            </div>
-            <div class="location-filter">
-                <label>Where to</label>
-                <input type="text" id="location" placeholder="Location"/>
-            </div>
-            <div class="button-filter">
-                <label style="visibility: hidden;">Search</label>
-                <button>Search</button>
-            </div>
-        </div>
-        <div class="hotels">
-            <div class="hotel-header">
-                <span style="font-weight: 600;">Lodging available</span>
-                <span>View All</span>
-            </div>
-            <div class="available">
-                <app-card-lodging-available></app-card-lodging-available>
-                <app-card-lodging-available></app-card-lodging-available>
-                <app-card-lodging-available></app-card-lodging-available>
-                <app-card-lodging-available></app-card-lodging-available>
-            </div>
-            <div class="ofers-header">
-                <span style="font-weight: 600;" (click)="setTab(hotelsTabs[0])" 
-                [ngClass]="{'disable-option': checkActiveTab(hotelsTabs[0])}">{{hotelsTabs[0]}}</span>
-                <span style="font-weight: 600;" (click)="setTab(hotelsTabs[1])"
-                [ngClass]="{'disable-option': checkActiveTab(hotelsTabs[1])}">{{hotelsTabs[1]}}</span>
-                <span style="font-weight: 600;" (click)="setTab(hotelsTabs[2])"
-                [ngClass]="{'disable-option': checkActiveTab(hotelsTabs[2])}">{{hotelsTabs[2]}}</span>
-                <span>View All</span>
-            </div>
-            <div class="ofers">
-                <app-card-lodging-ofers></app-card-lodging-ofers>
-                <app-card-lodging-ofers></app-card-lodging-ofers>
-                <app-card-lodging-ofers></app-card-lodging-ofers>
-                <app-card-lodging-ofers></app-card-lodging-ofers>
-            </div>
-        </div>
-
-    </section>
-    <div class="more-infos">
-        <app-detail-hotel></app-detail-hotel>
+  <header>
+    <legend>Find hotel to stay</legend>
+    <img src="../../assets/icon/hotel.png" />
+  </header>
+  <div class="filters">
+    <div class="date-filter">
+      <label>Date</label>
+      <input
+        type="text"
+        id="date"
+        placeholder="Select date"
+        onfocus="(this.type='date')"
+        onblur="(this.type='text')"
+      />
     </div>
+    <div class="location-filter">
+      <label>Where to</label>
+      <input type="text" id="location" placeholder="Location" />
+    </div>
+    <div class="button-filter">
+      <label style="visibility: hidden">Search</label>
+      <button>Search</button>
+    </div>
+  </div>
+  <div class="hotels">
+    <div class="hotel-header">
+      <span style="font-weight: bold">Lodging available</span>
+      <span>View All</span>
+    </div>
+    <div class="available" *ngIf="hotels$ | async as hotels">
+      <app-card-lodging-available
+        *ngFor="let hotel of hotels"
+        [hotel]="hotel"
+      ></app-card-lodging-available>
+    </div>
+    <div class="ofers-header">
+      <span
+        style="font-weight: 600"
+        (click)="setTab(hotelsTabs[0])"
+        [ngClass]="{ 'disable-option': checkActiveTab(hotelsTabs[0]) }"
+        >{{ hotelsTabs[0] }}</span
+      >
+      <span
+        style="font-weight: 600"
+        (click)="setTab(hotelsTabs[1])"
+        [ngClass]="{ 'disable-option': checkActiveTab(hotelsTabs[1]) }"
+        >{{ hotelsTabs[1] }}</span
+      >
+      <span
+        style="font-weight: 600"
+        (click)="setTab(hotelsTabs[2])"
+        [ngClass]="{ 'disable-option': checkActiveTab(hotelsTabs[2]) }"
+        >{{ hotelsTabs[2] }}</span
+      >
+      <span>View All</span>
+    </div>
+    <div class="ofers">
+      <app-card-lodging-ofers></app-card-lodging-ofers>
+      <app-card-lodging-ofers></app-card-lodging-ofers>
+      <app-card-lodging-ofers></app-card-lodging-ofers>
+      <app-card-lodging-ofers></app-card-lodging-ofers>
+    </div>
+  </div>
+</section>
+<div class="more-infos">
+  <app-detail-hotel></app-detail-hotel>
+</div>
