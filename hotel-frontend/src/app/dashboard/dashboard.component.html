@@ -9,10 +9,16 @@
       <input
         type="text"
         id="date"
+        value="{{ rangeValue }}"
         placeholder="Select date"
-        onfocus="(this.type='date')"
-        onblur="(this.type='text')"
+        readonly="true"
+        (click)="openDropdown()"
       />
+      <lib-range-input
+        *ngIf="dropdownActive"
+        (dropdownAction)="getAction($event)"
+        (value)="getValue($event)"
+      ></lib-range-input>
     </div>
     <div class="location-filter">
       <label>Where to</label>
