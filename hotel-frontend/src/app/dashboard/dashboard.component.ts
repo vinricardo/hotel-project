@@ -1,28 +1,33 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Hotel } from 'src/shared/models/hotel.model';
+
+import { DashboardService } from './service/dashboard.service';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
-  hotelsTabs: string[]= [
-    'Most Popular',
-    'Special Ofers',
-    'Near Me'
-  ]
+  hotelsTabs: string[] = ['Most Popular', 'Special Ofers', 'Near Me'];
   activeTab: string = this.hotelsTabs[0];
-  constructor() { }
+  hotels$!: Observable<Hotel[]>;
+  constructor(private dashboardService: DashboardService) {}
 
   ngOnInit(): void {
+    this.findHotels();
   }
 
-  setTab(tab: string){
+  findHotels() {
+    this.hotels$ = this.dashboardService.hotels;
+  }
+
+  setTab(tab: string) {
     this.activeTab = tab;
   }
 
-  checkActiveTab(tab: string):boolean{
+  checkActiveTab(tab: string): boolean {
     return this.activeTab != tab;
   }
-
 }

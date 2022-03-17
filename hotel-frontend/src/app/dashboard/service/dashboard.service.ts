@@ -7,7 +7,8 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class DashboardService {
   endpoints = {
-    getHotels: () => 'get-hotels'
+    getHotels: () => 'get-hotels',
+    getFile: () => 'files'
   }
 
 
@@ -15,5 +16,12 @@ export class DashboardService {
 
   get hotels() {
     return this.http.get<any>(`${environment.server}${this.endpoints.getHotels()}`);
+  }
+
+  findFile(filePath: string, hotelId: number){
+    return this.http.get<any>(`${environment.server}${this.endpoints.getFile()}`,
+    {
+      params: {filePath,hotelId}
+    });
   }
 }

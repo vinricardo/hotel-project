@@ -1,6 +1,15 @@
 <div class="card">
-    <img id="logo" src="../../assets/img/ads/off-45-percent.png" alt="">
-    <h3>Plaza Hotel</h3>
-    <p id="location"><img src="../../assets/icon/place.svg"> Jl. Auston No. 72 Yokmans Yokmans</p>
-    <p id="price"><strong>$41.25</strong><span>/night</span></p>
+  <img
+    id="logo"
+    src="{{ endpointBackend }}files?filePath={{ hotel.pictures[0].url }}"
+    alt=""
+  />
+  <h3>{{ hotel.name }}</h3>
+  <p id="location">
+    <img src="../../assets/icon/place.svg" /> Jl. Auston No. 72 Yokmans Yokmans
+  </p>
+  <p id="price">
+    <strong>${{ hotel.price }}</strong
+    ><span>/night</span>
+  </p>
 </div>
