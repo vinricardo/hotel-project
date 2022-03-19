@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Hotel } from 'src/shared/models/hotel.model';
 
+import { Hotel } from './../../shared/models/hotel.model';
 import { DashboardService } from './service/dashboard.service';
 
 @Component({
@@ -15,6 +15,7 @@ export class DashboardComponent implements OnInit {
   dropdownActive: boolean = false;
   rangeValue!: string;
   hotels$!: Observable<Hotel[]>;
+  selectHotel!: any;
 
   constructor(private dashboardService: DashboardService) {}
 
@@ -24,6 +25,10 @@ export class DashboardComponent implements OnInit {
 
   findHotels() {
     this.hotels$ = this.dashboardService.hotels;
+  }
+
+  detailHotel(hotel: any) {
+    this.selectHotel = hotel;
   }
 
   setTab(tab: string) {

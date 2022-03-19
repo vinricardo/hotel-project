@@ -38,6 +38,7 @@
       <app-card-lodging-available
         *ngFor="let hotel of hotels"
         [hotel]="hotel"
+        (click)="detailHotel(hotel)"
       ></app-card-lodging-available>
     </div>
     <div class="ofers-header">
@@ -70,5 +71,5 @@
   </div>
 </section>
 <div class="more-infos">
-  <app-detail-hotel></app-detail-hotel>
+  <app-detail-hotel [hotel]="selectHotel"></app-detail-hotel>
 </div>
