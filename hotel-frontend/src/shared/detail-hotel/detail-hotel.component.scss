@@ -56,7 +56,6 @@ section {
     display: flex;
     flex-wrap: wrap;
     p {
-      max-height: 80px;
       font-size: 14px;
       overflow: hidden;
       line-height: 20px;
@@ -102,4 +101,16 @@ section {
 .disable-option {
   color: $white-aside;
   background: 0 !important;
+}
+
+#not-found {
+  display: flex;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+  p {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #adadad;
+  }
 }

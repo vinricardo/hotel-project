@@ -10,11 +10,12 @@ import { environment } from './../../environments/environment';
 })
 export class CardLodgingAvailableComponent implements OnInit {
   @Input() hotel!: Hotel;
+  pictureProfile!: Pictures;
   endpointBackend = environment.server;
   constructor() {}
 
   ngOnInit(): void {
-    let pictures: Pictures[] = this.hotel.pictures;
-    this.hotel.pictures = pictures.filter((picture) => picture.profile);
+    let pictures: Pictures[] = JSON.parse(JSON.stringify(this.hotel.pictures));
+    this.pictureProfile = pictures.filter((picture) => picture.profile)[0];
   }
 }
