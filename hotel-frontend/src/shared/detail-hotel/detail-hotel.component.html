@@ -55,6 +55,20 @@
       {{ "No reviews!" }}
     </p>
   </div>
+  <h2>Location</h2>
+  <app-map
+    [ngStyle]="{ height: '20vh', margin: '1rem 0rem 1rem 0rem' }"
+    [options]="{
+      center: [
+        parseFloat(hotel.location.longitude),
+        parseFloat(hotel.location.latitude)
+      ],
+      zoom: 13,
+      zoomControl: false,
+      attributionControl: false,
+      dragging: false
+    }"
+  ></app-map>
   <div class="price-view">
     <button>${{ hotel.price }}<span>/night</span></button>
   </div>

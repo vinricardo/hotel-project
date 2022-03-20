@@ -55,6 +55,7 @@ section {
   .info {
     display: flex;
     flex-wrap: wrap;
+    min-height: 5rem;
     p {
       font-size: 14px;
       overflow: hidden;
