@@ -14,8 +14,8 @@ export interface Hotel {
 
 export interface Location {
   id: number;
-  longitude: string;
-  latitude: string;
+  longitude: number;
+  latitude: number;
   hotelId: number;
 }
 

@@ -28,12 +28,15 @@ export class DetailHotelComponent implements OnInit, OnChanges {
     return this.activeTab != tab;
   }
 
+  parseFloat(number: any) {
+    return parseFloat(number);
+  }
+
   ngOnChanges(changes: SimpleChanges) {
     if (!changes['hotel'].firstChange) {
       let pictures: Pictures[] = JSON.parse(
         JSON.stringify(this.hotel.pictures)
       );
-
       this.profilePicture = pictures.filter((picture) => picture.profile)[0];
       this.othersPictures = pictures.filter((picture) => !picture.profile);
     }
