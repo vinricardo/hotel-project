@@ -1,5 +1,5 @@
 <section *ngIf="hotel">
-  <h2>Plaza Hotel</h2>
+  <h2>{{ hotel.name }}</h2>
   <div class="imgs">
     <div class="main-pic">
       <img
@@ -58,6 +58,7 @@
   <h2>Location</h2>
   <app-map
     [ngStyle]="{ height: '20vh', margin: '1rem 0rem 1rem 0rem' }"
+    [markers]="true"
     [options]="{
       center: [
         parseFloat(hotel.location.longitude),
@@ -66,7 +67,8 @@
       zoom: 13,
       zoomControl: false,
       attributionControl: false,
-      dragging: false
+      dragging: false,
+      height: '20vh'
     }"
   ></app-map>
   <div class="price-view">

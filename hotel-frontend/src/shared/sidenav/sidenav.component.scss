@@ -2,11 +2,14 @@
 
 aside {
   background-color: $background-aside;
-  height: 100vh;
   max-width: 13rem;
+  z-index: 999 !important;
+  position: fixed;
   width: 13rem;
   box-shadow: 1px 0px 80px rgba(0, 0, 0, 0.185);
-
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   picture {
     display: flex;
     justify-content: center;
@@ -18,8 +21,8 @@ aside {
   }
 
   section {
-    height: 89vh;
     display: flex;
+    height: 80vh;
     flex-direction: column;
     justify-content: space-around;
   }
